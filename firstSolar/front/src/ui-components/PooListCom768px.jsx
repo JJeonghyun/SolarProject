@@ -1313,6 +1313,7 @@ export default function PooListCom768px(props) {
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
                   children="Overnight Pulse Act ll"
+                  overflow="hidden"
                   {...getOverrideProps(overrides, "Overnight Pulse Act ll")}
                 ></Text>
                 <Flex

@@ -28,3 +28,4 @@ export { default as AddLiquidityBottom320px } from "./AddLiquidityBottom320px";
 export { default as BeforeHeadCom320px } from "./BeforeHeadCom320px";
 export { default as SelTokken768px } from "./SelTokken768px";
 export { default as studioTheme } from "./studioTheme";
+export { default as Footer } from "./Footer";
