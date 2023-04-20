@@ -21,8 +21,6 @@ export default function BeforeHeadCom1024px(props) {
         small: "none",
         medium: "none",
         large: "flex",
-        xl: "none",
-        xxl: "none",
       }}
       gap="unset"
       alignItems="unset"

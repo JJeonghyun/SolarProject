@@ -12,14 +12,6 @@ export default function MyWallet768px(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
-      display={{
-        base: "none",
-        small: "flex",
-        medium: "flex",
-        large: "none",
-        xl: "none",
-        xxl: "none",
-      }}
       gap="46px"
       direction="column"
       width="634px"
@@ -110,7 +102,7 @@ export default function MyWallet768px(props) {
           boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
           borderRadius="25px"
           padding="11px 13px 11px 13px"
-          backgroundColor="rgba(255,226,0,0.55)"
+          backgroundColor="rgba(255,226,0,0.35)"
           {...getOverrideProps(overrides, "Dexname140222824")}
         >
           <Text
@@ -150,7 +142,7 @@ export default function MyWallet768px(props) {
           boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
           borderRadius="25px"
           padding="11px 13px 11px 13px"
-          backgroundColor="rgba(0,136,153,0.86)"
+          backgroundColor="rgba(0,136,153,0.59)"
           {...getOverrideProps(overrides, "Dexname240222830")}
         >
           <Text
@@ -239,7 +231,7 @@ export default function MyWallet768px(props) {
             boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
             borderRadius="25px"
             padding="11px 13px 11px 13px"
-            backgroundColor="rgba(234,0,50,0.55)"
+            backgroundColor="rgba(234,0,50,0.45)"
             {...getOverrideProps(overrides, "Dexname140222845")}
           >
             <Text
@@ -325,7 +317,7 @@ export default function MyWallet768px(props) {
             boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
             borderRadius="25px"
             padding="11px 13px 11px 13px"
-            backgroundColor="rgba(0,136,153,0.86)"
+            backgroundColor="rgba(0,136,153,0.59)"
             {...getOverrideProps(overrides, "Dexname140222763")}
           >
             <Image
@@ -555,7 +547,7 @@ export default function MyWallet768px(props) {
             boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
             borderRadius="25px"
             padding="11px 13px 11px 13px"
-            backgroundColor="rgba(255,226,0,0.55)"
+            backgroundColor="rgba(255,226,0,0.35)"
             {...getOverrideProps(overrides, "Dexname140222886")}
           >
             <Image
@@ -858,7 +850,7 @@ export default function MyWallet768px(props) {
           boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
           borderRadius="25px"
           padding="11px 13px 11px 13px"
-          backgroundColor="rgba(234,0,50,0.55)"
+          backgroundColor="rgba(234,0,50,0.45)"
           {...getOverrideProps(overrides, "Dexname140222961")}
         >
           <Image

@@ -12,17 +12,9 @@ export default function SwapCompo768px(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
-      display={{
-        base: "none",
-        small: "flex",
-        medium: "flex",
-        large: "flex",
-        xl: "none",
-        xxl: "none",
-      }}
       gap="30px"
       direction="row"
-      width="80vw"
+      width="626px"
       height="unset"
       justifyContent="flex-start"
       alignItems="center"
@@ -47,7 +39,7 @@ export default function SwapCompo768px(props) {
         boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
         borderRadius="45px"
         padding="19px 25px 19px 25px"
-        backgroundColor="rgba(234,0,50,0.55)"
+        backgroundColor="rgba(234,0,50,0.45)"
         {...getOverrideProps(overrides, "Connect40052829")}
       >
         <Text
@@ -89,7 +81,6 @@ export default function SwapCompo768px(props) {
         borderRadius="45px"
         padding="19px 25px 19px 25px"
         backgroundColor="rgba(255,226,0,0.35)"
-        overflow="hidden"
         {...getOverrideProps(overrides, "Connect40052831")}
       >
         <Text

@@ -12,14 +12,6 @@ export default function ConnectCompo320px(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
-      display={{
-        base: "flex",
-        small: "none",
-        medium: "none",
-        large: "none",
-        xl: "none",
-        xxl: "none",
-      }}
       gap="30px"
       direction="row"
       width="320px"
@@ -47,15 +39,15 @@ export default function ConnectCompo320px(props) {
         boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
         borderRadius="45px"
         padding="19px 25px 19px 25px"
-        backgroundColor="rgba(0,136,153,0.88)"
+        backgroundColor="rgba(0,136,153,0.59)"
         {...getOverrideProps(overrides, "Connect40052834")}
       >
         <Text
           fontFamily="Inter"
-          fontSize="18px"
+          fontSize="21px"
           fontWeight="700"
           color="rgba(239,239,239,1)"
-          lineHeight="21.784090042114258px"
+          lineHeight="25.414772033691406px"
           textAlign="center"
           display="block"
           direction="column"

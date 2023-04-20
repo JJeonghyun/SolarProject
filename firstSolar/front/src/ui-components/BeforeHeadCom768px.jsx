@@ -7,30 +7,18 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import {
-  Divider,
-  Flex,
-  Image,
-  Loader,
-  Menu,
-  MenuItem,
-  SearchField,
-  useTheme,
-} from "@aws-amplify/ui-react";
+import { Flex, Image, SearchField, useTheme } from "@aws-amplify/ui-react";
 import logo from "./images/logo_new.png";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import LoginAccount from "./LoginAccount";
 import ConnectModal from "./ConnectModal";
-import ConnectButton from "./ConnectButton";
-import LoadingButton from "./LoadingButton";
 import LoggedinUser from "./LoggedinUser";
 import LoginButton from "./LoginButton";
-export default function BeforeHeadCom768px(props) {
-  const { overrides, ...rest } = props;
-  const { tokens } = useTheme();
-  const connect = useSelector((state) => state.connect.connect.connect);
 
+export default function BeforeHeadCom768px(props) {
+  const { tokens } = useTheme();
+  const connect = useSelector(state => state.connect.connect.connect);
+  const { overrides, ...rest } = props;
   return (
     <Cover>
       <Flex
@@ -82,16 +70,13 @@ export default function BeforeHeadCom768px(props) {
           >
             <Image
               src={logo}
-              width="unset"
-              height="unset"
+              width="37.56px"
+              height="38px"
               display="block"
               gap="unset"
               alignItems="unset"
               justifyContent="unset"
-              grow="1"
-              shrink="1"
-              basis="0"
-              alignSelf="stretch"
+              shrink="0"
               position="relative"
               borderRadius="50px"
               padding="0px 0px 0px 0px"
@@ -104,40 +89,31 @@ export default function BeforeHeadCom768px(props) {
             direction="row"
             width="57.56px"
             height="58px"
-            justifyContent="center"
+            justifyContent="flex-start"
             alignItems="flex-start"
             shrink="0"
             position="relative"
-            // boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
             padding="10px 10px 10px 10px"
             {...getOverrideProps(overrides, "Frame 45")}
           >
-            <Menu
-              menuAlign="start"
-              size="large"
-              className="my-menu-content"
-              triggerClassName="my-menu-trigger"
-            >
-              <MenuItem onClick={() => alert("Download")}>Download</MenuItem>
-              <MenuItem onClick={() => alert("Create a Copy")}>
-                Create a Copy
-              </MenuItem>
-              <MenuItem onClick={() => alert("Mark as Draft")}>
-                Mark as Draft
-              </MenuItem>
-              <Divider />
-              <MenuItem isDisabled onClick={() => alert("Delete")}>
-                Delete
-              </MenuItem>
-              <MenuItem onClick={() => alert("Attend a workshop")}>
-                Attend a workshop
-              </MenuItem>
-            </Menu>
+            <Image
+              width="37.56px"
+              height="38px"
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
+              shrink="0"
+              position="relative"
+              borderRadius="50px"
+              padding="0px 0px 0px 0px"
+              objectFit="cover"
+              {...getOverrideProps(overrides, "unsplash:PfBvNnGIhmQ39433251")}
+            ></Image>
           </Flex>
         </Flex>
         <SearchField
-          className="searchInput"
-          width="50%"
+          width="305px"
           height="unset"
           placeholder="Search"
           justifyContent="center"
@@ -150,6 +126,7 @@ export default function BeforeHeadCom768px(props) {
           variation="quiet"
           {...getOverrideProps(overrides, "SearchField")}
         ></SearchField>
+
         <div className="header_right">
           {connect ? (
             document.cookie ? (
@@ -179,12 +156,5 @@ export default function BeforeHeadCom768px(props) {
 const Cover = styled.div`
   input::placeholder {
     width: 60px;
-  }
-  .my-menu-content.amplify-menu-content {
-    --amplify-components-button-border: none;
-  }
-
-  .my-menu-trigger.amplify-menu-trigger {
-    --amplify-components-button-border-color: transparent;
   }
 `;

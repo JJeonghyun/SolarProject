@@ -12,14 +12,6 @@ export default function ConnectCompo768px(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
-      display={{
-        base: "none",
-        small: "flex",
-        medium: "flex",
-        large: "none",
-        xl: "none",
-        xxl: "none",
-      }}
       gap="30px"
       direction="row"
       width="626px"
@@ -47,15 +39,15 @@ export default function ConnectCompo768px(props) {
         boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
         borderRadius="45px"
         padding="19px 25px 19px 25px"
-        backgroundColor="rgba(0,136,153,0.86)"
+        backgroundColor="rgba(0,136,153,0.59)"
         {...getOverrideProps(overrides, "Connect40052826")}
       >
         <Text
           fontFamily="Inter"
-          fontSize="24px"
+          fontSize="28px"
           fontWeight="700"
           color="rgba(239,239,239,1)"
-          lineHeight="29.045454025268555px"
+          lineHeight="33.8863639831543px"
           textAlign="center"
           display="block"
           direction="column"

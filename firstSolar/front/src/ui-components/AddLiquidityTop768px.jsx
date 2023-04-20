@@ -12,17 +12,9 @@ export default function AddLiquidityTop768px(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
-      display={{
-        base: "none",
-        small: "flex",
-        medium: "flex",
-        large: "none",
-        xl: "none",
-        xxl: "none",
-      }}
       gap="49px"
       direction="column"
-      width="80vw"
+      width="688px"
       height="unset"
       justifyContent="flex-start"
       alignItems="flex-start"
@@ -177,7 +169,7 @@ export default function AddLiquidityTop768px(props) {
           boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
           borderRadius="15px"
           padding="13px 13px 13px 13px"
-          backgroundColor="rgba(255,226,0,0.55)"
+          backgroundColor="rgba(255,226,0,0.35)"
           {...getOverrideProps(overrides, "Frame 119")}
         >
           <Text
@@ -215,10 +207,10 @@ export default function AddLiquidityTop768px(props) {
         shrink="0"
         alignSelf="stretch"
         position="relative"
-        border="3.1px SOLID rgba(234,0,50,0.55)"
+        border="2.7px SOLID rgba(234,0,50,0.45)"
         boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
         borderRadius="35px"
-        padding="46.90000009536743px 46.90000009536743px 46.90000009536743px 46.90000009536743px"
+        padding="47.299999952316284px 47.299999952316284px 47.299999952316284px 47.299999952316284px"
         {...getOverrideProps(overrides, "Frame 11140132818")}
       >
         <Text
@@ -505,7 +497,7 @@ export default function AddLiquidityTop768px(props) {
               fontFamily="Inter"
               fontSize="18px"
               fontWeight="700"
-              color="rgba(234,0,50,0.55)"
+              color="rgba(234,0,50,0.45)"
               lineHeight="21.784090042114258px"
               textAlign="center"
               display="block"
@@ -623,7 +615,7 @@ export default function AddLiquidityTop768px(props) {
               fontFamily="Inter"
               fontSize="18px"
               fontWeight="700"
-              color="rgba(0,136,153,0.86)"
+              color="rgba(0,136,153,0.59)"
               lineHeight="21.784090042114258px"
               textAlign="left"
               display="block"
