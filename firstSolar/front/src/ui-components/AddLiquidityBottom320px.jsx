@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useEffect, useRef } from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { motion } from "framer-motion";
 import { Flex, Image, Text, TextAreaField } from "@aws-amplify/ui-react";
@@ -11,7 +11,8 @@ import { useSelector } from "react-redux";
 import LoadingCompo from "./LoadingCompo";
 
 export default function AddLiquidityBottom320px(props) {
-  const isLoading = useSelector(state => state.isLoading);
+  const isLoading = useSelector((state) => state.isLoading);
+  const newComponentRef = useRef(null);
   const {
     overrides,
     oracleiddata,
@@ -31,6 +32,14 @@ export default function AddLiquidityBottom320px(props) {
     ...rest
   } = props;
 
+  useEffect(() => {
+    window.scrollTo(0, newComponentRef.current.clientHeight);
+
+    return () => {
+      window.scrollTo(0, 0);
+    };
+  }, []);
+
   return (
     <Flex
       gap="10px"
@@ -43,6 +52,7 @@ export default function AddLiquidityBottom320px(props) {
       position="relative"
       borderRadius="35px"
       padding="38px 0px 38px 0px"
+      ref={newComponentRef}
       {...getOverrideProps(overrides, "AddLiquidityBottom320px")}
       {...rest}
     >
@@ -505,7 +515,7 @@ export default function AddLiquidityBottom320px(props) {
               labelHidden={false}
               variation="default"
               value={firstValue}
-              onChange={e => {
+              onChange={(e) => {
                 if (+e.target.value > +userFirstBalance) {
                   e.target.value = userFirstBalance;
                 }
@@ -650,7 +660,7 @@ export default function AddLiquidityBottom320px(props) {
               labelHidden={false}
               variation="default"
               value={secondValue}
-              onChange={e => {
+              onChange={(e) => {
                 if (+e.target.value > +userSecondBalance) {
                   e.target.value = userSecondBalance;
                 }
