@@ -40,7 +40,7 @@ const SwapContainer = () => {
   const navigate = useNavigate();
 
   const { address } = useAccount();
-  const address2 = useSelector(state => state.account);
+  const address2 = useSelector((state) => state.account);
   const [userFirstBalance, setUserFirstBalance] = useState(0);
   const [userSecondBalance, setUserSecondBalance] = useState(0);
   const [textareaValue, setTextAreaValue] = useState("");
@@ -80,7 +80,7 @@ const SwapContainer = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => setIsOpen(!isOpen);
-  const isLoading = useSelector(state => state.isLoading);
+  const isLoading = useSelector((state) => state.isLoading);
   const dispatch = useDispatch();
   const isDesktop = useMediaQuery({
     query: "(min-width:500px)",
@@ -258,14 +258,14 @@ const SwapContainer = () => {
     "Backspace", // 백스페이스
   ];
 
-  const handleKeyPress = e => {
+  const handleKeyPress = (e) => {
     const keyCode = e.key;
     if (!allowedKeys.includes(keyCode)) {
       e.preventDefault();
     }
   };
 
-  const setPercentBalance = percentNum => {
+  const setPercentBalance = (percentNum) => {
     if (
       userFirstBalance == 0 &&
       userFirstBalance == undefined &&
@@ -276,7 +276,7 @@ const SwapContainer = () => {
     delayedFunction1(userFirstBalance * percentNum);
   };
 
-  const handleTextareaChange = event => {
+  const handleTextareaChange = (event) => {
     const value = event.target.value;
 
     const filteredValue = value.replace(/[^0-9.\b]/g, "");
@@ -319,7 +319,7 @@ const SwapContainer = () => {
     }, 1000);
   }
 
-  const delayedFunction2 = num => {
+  const delayedFunction2 = (num) => {
     try {
       if (secondSelectToken == "DFS") {
         setSecondAmountPrice(convertPrice.usdt * num);
