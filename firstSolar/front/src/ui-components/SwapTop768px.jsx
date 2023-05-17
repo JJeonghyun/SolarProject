@@ -14,7 +14,6 @@ export default function SwapTop768px(props) {
     lastTimeStamp,
     ...rest
   } = props;
-
   return (
     <Flex
       gap="49px"
