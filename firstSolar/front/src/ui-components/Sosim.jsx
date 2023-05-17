@@ -196,7 +196,7 @@ export default function Sosim(props) {
               onTapStart={() => setIsPress(true)}
               onTap={() => setIsPress(false)}
               onTapCancel={() => setIsPress(false)}
-              onPointerMove={e => {
+              onPointerMove={(e) => {
                 mouseX.set(e.clientX - bounds.x - bounds.width / 1.23);
                 mouseY.set(e.clientY - bounds.y - bounds.height / 1.25);
               }}
