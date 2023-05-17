@@ -13,9 +13,9 @@ import "../css/Connect.css";
 import useMeasure from "react-use-measure";
 import { gsap } from "gsap";
 import { Tween, SplitChars, Reveal } from "react-gsap";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import { motion, MotionConfig, useMotionValue } from "framer-motion";
-import { RocketShapes } from "../components/button/RocketShapes";
+
 import { transition } from "../components/button/settings";
 import { useDispatch } from "react-redux";
 import { setConnect } from "../modules/connect";
@@ -91,48 +91,11 @@ export default function ConnectCompo1440px(props) {
           onTapStart={() => setIsPress(true)}
           onTap={() => setIsPress(false)}
           onTapCancel={() => setIsPress(false)}
-          onPointerMove={e => {
+          onPointerMove={(e) => {
             mouseX.set(e.clientX - bounds.x - bounds.width / 1.23);
             mouseY.set(e.clientY - bounds.y - bounds.height / 1.17);
           }}
         >
-          <motion.div
-            style={{
-              position: "absolute",
-              top: "-1px",
-              left: "-1px",
-              right: "-1px",
-              bottom: "-1px",
-              borderRadius: "60px",
-              backgroundColor: "#E9546B",
-            }}
-            variants={{
-              rest: { opacity: 0 },
-              hover: { opacity: 1 },
-            }}
-          >
-            <Flex
-              style={{
-                position: "absolute",
-                top: "-100px",
-                bottom: "-100px",
-                left: "-100px",
-                right: "-100px",
-                width: "calc(100% + 200px)",
-                pointerEvents: "none",
-              }}
-            >
-              <Suspense fallback={null}>
-                <RocketShapes
-                  isHover={isHover}
-                  isPress={isPress}
-                  mouseX={mouseX}
-                  mouseY={mouseY}
-                />
-              </Suspense>
-            </Flex>
-          </motion.div>
-
           <motion.div
             onClick={() => {
               dispatch(setConnect({ connect: true }));
