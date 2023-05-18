@@ -104,10 +104,20 @@ export default function Sosim(props) {
       marginTop={{ base: "30px", large: "35px" }}
       gap="0"
       direction={{ base: "column", small: "row" }}
-      width="100%"
+      width={{ base: "100%", small: "45%" }}
       height={{ small: "unset", medium: "29vh" }}
-      justifyContent="flex-start"
-      alignItems={{ base: "flex-end", small: "flex-start" }}
+      justifyContent={{
+        base: "flex-end",
+        small: "center",
+        medium: "center",
+        large: "flex-start",
+      }}
+      alignItems={{
+        base: "flex-end",
+        small: "center",
+        medium: "center",
+        large: "flex-start",
+      }}
       position="relative"
       padding="0px 0px 0px 0px"
       boxShadow="31px 19px 21px rgba(0, 0, 0, 0.25)"
@@ -129,7 +139,7 @@ export default function Sosim(props) {
         gap="10px"
         direction="column"
         width={{ base: "174.15px", small: "unset" }}
-        height={{ small: "unset", medium: "29vh" }}
+        height={{ small: "unset", medium: "unset", large: "unset" }}
         justifyContent="flex-end"
         alignItems="flex-start"
         grow="1"
@@ -258,15 +268,16 @@ export default function Sosim(props) {
                 }}
               >
                 <Flex
-                  onMouseEnter={onEnter}
-                  onMouseLeave={onLeave}
+                  onClick={onEnter}
+                  // onMouseLeave={onLeave}
                   fontFamily="ffProBook"
                   gap="10px"
+                  marginLeft="25px"
                   direction={{
                     base: "column",
                     small: "column",
                     medium: "column",
-                    large: "row",
+                    large: "column",
                   }}
                   width="unset"
                   justifyContent="flex-end"
@@ -301,9 +312,33 @@ export default function Sosim(props) {
                     position="relative"
                     padding="0px 0px 0px 0px"
                     whiteSpace="pre-wrap"
-                    children="So Easy So Simple "
+                    children="So Simple"
                     {...getOverrideProps(overrides, "So Easy So Simple")}
                   ></Text>
+                  {/* <Text
+                    style={{ cursor: "pointer" }}
+                    fontFamily="ffProBook"
+                    fontSize={{ base: "23px", small: "32px", medium: "29px" }}
+                    letterSpacing={{ base: "0px", small: "5px" }}
+                    fontWeight="800"
+                    color="#FDFCF5"
+                    lineHeight="42.35795211791992px"
+                    textAlign="left"
+                    display="block"
+                    direction="column"
+                    justifyContent="unset"
+                    width="unset"
+                    height="unset"
+                    gap="unset"
+                    alignItems="unset"
+                    shrink="0"
+                    alignSelf="stretch"
+                    position="relative"
+                    padding="0px 0px 0px 0px"
+                    whiteSpace="pre-wrap"
+                    children="So Easy"
+                    {...getOverrideProps(overrides, "So Easy So Simple")}
+                  ></Text> */}
 
                   <Text
                     display={{
@@ -343,7 +378,7 @@ export default function Sosim(props) {
       </Flex>
 
       <motion.div
-        onMouseEnter={handleMouseEnter}
+        onClick={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{
           display: "flex",
@@ -371,7 +406,7 @@ export default function Sosim(props) {
           shrink="0"
           alignSelf="stretch"
           position="relative"
-          padding="0px 0px 0px 0px"
+          padding="0px 20px 0px 0px"
           {...getOverrideProps(overrides, "Frame 55")}
         >
           <Flex
@@ -389,13 +424,13 @@ export default function Sosim(props) {
           >
             {isHovered ? (
               <Text
-                color="#FCFAF2"
+                color="#373C38"
                 style={{ cursor: "pointer" }}
                 letterSpacing="0.86px"
                 marginTop="9px"
-                marginBottom="17px"
+                marginBottom="0px"
                 fontFamily="ffProBold"
-                fontSize="15px"
+                fontSize="13px"
                 fontWeight="500"
                 lineHeight="18.15340805053711px"
                 textAlign="left"
@@ -423,7 +458,7 @@ export default function Sosim(props) {
                 marginTop="9px"
                 marginBottom="17px"
                 fontFamily="ffProBold"
-                fontSize="15px"
+                fontSize="13px"
                 fontWeight="500"
                 lineHeight="18.15340805053711px"
                 textAlign="left"
@@ -463,8 +498,8 @@ export default function Sosim(props) {
               {isHovered ? (
                 <>
                   <Flex
-                    onMouseEnter={onEnter}
-                    onMouseLeave={onLeave}
+                    onClick={onEnter}
+                    // onMouseLeave={onLeave}
                     style={{ cursor: "pointer" }}
                     gap="10px"
                     direction="row"
@@ -479,7 +514,7 @@ export default function Sosim(props) {
                     {...getOverrideProps(overrides, "Frame 49")}
                   >
                     <Icon
-                      color="#FCFAF2"
+                      color="#373C38"
                       width="25px"
                       height="25px"
                       viewBox={{ minX: 0, minY: 0, width: 25, height: 25 }}
@@ -501,7 +536,7 @@ export default function Sosim(props) {
                       fontFamily="ffProBook"
                       fontSize="12px"
                       fontWeight="800"
-                      color="#FCFAF2"
+                      color="#373C38"
                       lineHeight="18.15340805053711px"
                       textAlign="left"
                       display="block"
@@ -522,8 +557,8 @@ export default function Sosim(props) {
                     ></Text>
                   </Flex>
                   <Flex
-                    onMouseEnter={onEnter}
-                    onMouseLeave={onLeave}
+                    onClick={onEnter}
+                    // onMouseLeave={onLeave}
                     style={{ cursor: "pointer" }}
                     gap="10px"
                     direction="row"
@@ -538,7 +573,7 @@ export default function Sosim(props) {
                     {...getOverrideProps(overrides, "Frame 52")}
                   >
                     <Icon
-                      color="#FCFAF2"
+                      color="#373C38"
                       width="25px"
                       height="25px"
                       viewBox={{ minX: 0, minY: 0, width: 25, height: 25 }}
@@ -560,7 +595,7 @@ export default function Sosim(props) {
                       fontFamily="ffProBook"
                       fontSize="12px"
                       fontWeight="800"
-                      color="#FCFAF2"
+                      color="#373C38"
                       lineHeight="18.15340805053711px"
                       textAlign="left"
                       display="block"
@@ -584,8 +619,8 @@ export default function Sosim(props) {
               ) : (
                 <>
                   <Flex
-                    onMouseEnter={onEnter}
-                    onMouseLeave={onLeave}
+                    onClick={onEnter}
+                    // onMouseLeave={onLeave}
                     style={{ cursor: "pointer" }}
                     gap="10px"
                     direction="row"
@@ -643,8 +678,8 @@ export default function Sosim(props) {
                     ></Text>
                   </Flex>
                   <Flex
-                    onMouseEnter={onEnter}
-                    onMouseLeave={onLeave}
+                    onClick={onEnter}
+                    // onMouseLeave={onLeave}
                     style={{ cursor: "pointer" }}
                     gap="10px"
                     direction="row"
