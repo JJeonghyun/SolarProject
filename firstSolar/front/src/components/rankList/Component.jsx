@@ -1,4 +1,4 @@
-import { ListMain } from "./listmain";
+import ListMain from "./Listmain";
 import { Flex } from "@aws-amplify/ui-react";
 import { motion } from "framer-motion";
 
