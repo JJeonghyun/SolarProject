@@ -35,7 +35,7 @@ export function LiqudityButton(props) {
   return (
     <MotionConfig transition={transition}>
       <motion.button
-        onClick={e => {
+        onClick={(e) => {
           e.preventDefault;
           const url = isDFS
             ? `/addliquidity?${props.props.item.oracleId}`
@@ -73,7 +73,7 @@ export function LiqudityButton(props) {
         onTapStart={() => setIsPressSecond(true)}
         onTap={() => setIsPressSecond(false)}
         onTapCancel={() => setIsPressSecond(false)}
-        onPointerMove={e => {
+        onPointerMove={(e) => {
           mouseX.set(e.clientX - bounds.x - bounds.width / 2);
           mouseY.set(e.clientY - bounds.y - bounds.height / 2);
         }}

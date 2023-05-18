@@ -5,12 +5,20 @@ import { Flex, Image, Text } from "@aws-amplify/ui-react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { ConnectCompo1440px, SwapCompo1440px } from "../../ui-components";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import "../../css/Font.css";
 import { useAccount } from "wagmi";
 
 const Poolitem1024 = (props) => {
-  const { overrides, currentPagePoolList, ...rest } = props;
+  const {
+    overrides,
+    idx,
+    item,
+    currentPagePoolList,
+    sortAPY,
+    sortTVL,
+    ...rest
+  } = props;
   const [isOpen, setIsOpen] = useState(false);
   const [isDFS, setIsDFS] = useState(false);
   const toggleOpen = () => setIsOpen(!isOpen);
@@ -18,11 +26,10 @@ const Poolitem1024 = (props) => {
   const { address } = useAccount();
 
   const addressResult = address || address2;
-  const dispatch = useDispatch();
 
   useEffect(() => {
-    setIsDFS(props?.item?.oracleId.includes("DFS"));
-  }, [currentPagePoolList]);
+    setIsDFS(item?.oracleId.includes("DFS"));
+  }, [sortAPY, sortTVL, currentPagePoolList]);
 
   return (
     <>
@@ -31,7 +38,7 @@ const Poolitem1024 = (props) => {
           duration: 0.2,
           ease: [0.43, 0.13, 0.23, 0.96],
         }}
-        key={`Poolitem1024px-${props?.idx}`}
+        key={`Poolitem1024px-${idx}`}
       >
         <motion.div
           onClick={toggleOpen}
@@ -93,7 +100,7 @@ const Poolitem1024 = (props) => {
                 {...getOverrideProps(overrides, "PoolImg")}
               >
                 <Image
-                  src={props?.item?.mainNetLogo}
+                  src={item?.mainNetLogo}
                   width="28px"
                   height="28px"
                   display="block"
@@ -108,7 +115,7 @@ const Poolitem1024 = (props) => {
                   {...getOverrideProps(overrides, "unsplash:AYOloXgqjzo")}
                 ></Image>
                 <Image
-                  src={props?.item?.platformLogo}
+                  src={item?.platformLogo}
                   width="38px"
                   height="38px"
                   display="block"
@@ -157,7 +164,7 @@ const Poolitem1024 = (props) => {
                   position="relative"
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
-                  children={props?.item?.name}
+                  children={item?.name}
                   {...getOverrideProps(overrides, "Overnight Pulse Act ll")}
                 ></Text>
                 <Flex
@@ -212,7 +219,7 @@ const Poolitem1024 = (props) => {
                       position="relative"
                       padding="0px 0px 0px 0px"
                       whiteSpace="pre-wrap"
-                      children={props?.item?.network}
+                      children={item?.network}
                       {...getOverrideProps(overrides, "VELOCIMETER")}
                     ></Text>
                   </Flex>
@@ -253,7 +260,7 @@ const Poolitem1024 = (props) => {
                       position="relative"
                       padding="0px 0px 0px 0px"
                       whiteSpace="pre-wrap"
-                      children={props?.item?.platformId}
+                      children={item?.platformId}
                       {...getOverrideProps(overrides, "STADER BOOST")}
                     ></Text>
                   </Flex>
@@ -387,7 +394,7 @@ const Poolitem1024 = (props) => {
                   position="relative"
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
-                  children={`${Math.round(props?.item?.apy * 10000) / 10000} %`}
+                  children={`${Math.round(item?.apy * 10000) / 10000} %`}
                   {...getOverrideProps(overrides, "99.99%")}
                 ></Text>
               </Flex>
@@ -427,10 +434,9 @@ const Poolitem1024 = (props) => {
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
                   children={`$${
-                    props?.item?.name?.includes("DFS")
-                      ? parseInt((props?.item?.tvl / 10 ** 18) * 10000) /
-                          10000 || 0
-                      : props?.item?.tvl
+                    item?.name?.includes("DFS")
+                      ? parseInt((item?.tvl / 10 ** 18) * 10000) / 10000 || 0
+                      : item?.tvl
                   }`}
                   {...getOverrideProps(overrides, "$999,99939913056")}
                 ></Text>
@@ -471,10 +477,10 @@ const Poolitem1024 = (props) => {
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
                   children={`$${
-                    props?.item?.dailyTvlRate == null ||
-                    props?.item?.dailyTvlRate == undefined
+                    item?.dailyTvlRate == null ||
+                    item?.dailyTvlRate == undefined
                       ? 0
-                      : Math.round(props?.item?.dailyTvlRate * 10000) / 10000
+                      : Math.round(item?.dailyTvlRate * 10000) / 10000
                   }`}
                   {...getOverrideProps(overrides, "$999,99939913058")}
                 ></Text>

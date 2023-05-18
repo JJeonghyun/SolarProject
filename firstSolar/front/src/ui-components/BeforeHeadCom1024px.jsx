@@ -36,8 +36,8 @@ export default function BeforeHeadCom1024px(props) {
     address,
     ...rest
   } = props;
-  const login = useSelector(state => state.login);
-  const connect = useSelector(state => state.connect);
+  const login = useSelector((state) => state.login);
+  const connect = useSelector((state) => state.connect);
 
   return (
     <View
