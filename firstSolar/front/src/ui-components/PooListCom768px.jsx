@@ -14,6 +14,7 @@ import {
   Dexlist768px,
 } from "../components/netdexlist/Netdexlist";
 import { motion, LayoutGroup } from "framer-motion";
+import { useSelector } from "react-redux";
 
 export default function PooListCom768px(props) {
   const {
@@ -34,7 +35,7 @@ export default function PooListCom768px(props) {
     ...rest
   } = props;
 
-  const isLoading = useSelector((state) => state.isLoading);
+  const isLoading = useSelector(state => state.isLoading);
   return (
     <Flex
       display="flex"
@@ -341,7 +342,7 @@ export default function PooListCom768px(props) {
         <Flex width="80vw" justifyContent="center" padding="30px 0px 0px 0px">
           <Pagination
             {...paginationProps}
-            onChange={(pageNum) => {
+            onChange={pageNum => {
               setPageIndex(pageNum);
             }}
             onNext={() => {
