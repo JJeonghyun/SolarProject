@@ -405,6 +405,7 @@ export default function MyPageCompo1024px(props) {
             <Loader width="80px" height="80px" />
           </Flex>
         ) : (
+          Array.isArray(myList) &&
           myList?.map((item, idx) => (
             <MyPageList1024px
               key={`MyPageList1024px-2${idx}`}
