@@ -34,7 +34,6 @@ export default function ConnectCompo1440px(props) {
     >
       <motion.div
         style={{
-          marginLeft: "114px",
           width: "unset",
           height: "unset",
           borderRadius: "35px",
