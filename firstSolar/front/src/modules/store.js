@@ -5,7 +5,6 @@ import accountReducer from "./account.js";
 import loginReducer from "./login.js";
 import pageIndexReducer from "./pageIndex.js";
 import filterReducer from "./filter.js";
-import emptySearchReducer from "./emptySearch.js";
 import completeModalReducer from "./completeModal.js";
 import outRedirectModalOpenReducer from "./outRedirectModalOpen.js";
 
@@ -17,7 +16,6 @@ const store = configureStore({
     login: loginReducer,
     pageIndex: pageIndexReducer,
     filter: filterReducer,
-    emptySearch: emptySearchReducer,
     completeModal: completeModalReducer,
     outRedirectModalOpen: outRedirectModalOpenReducer,
   },
