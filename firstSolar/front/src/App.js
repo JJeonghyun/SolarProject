@@ -73,7 +73,6 @@ function App() {
               ></Route>
             </Routes>
           </MainContent>
-          {/* <FooterContainer /> */}
 
           {outRedirectModalOpen && (
             <LoadingModal>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ListItem } from "./listitem";
+import ListItem from "./Listitem";
 import { Flex, Loader, Text } from "@aws-amplify/ui-react";
 import "../../css/Font.css";
 import "../../css/RankList.css";
@@ -149,4 +149,4 @@ const RankNameList = styled.div`
   text-align: center;
 `;
 
-export { ListMain };
+export default ListMain;

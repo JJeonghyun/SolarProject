@@ -18,7 +18,7 @@ const ListItem = ({ content, index }, props) => {
   const toggleOpen = () => setIsOpen(!isOpen);
   const dispatch = useDispatch();
   const { address } = useAccount();
-  const address2 = useSelector(state => state.account);
+  const address2 = useSelector((state) => state.account);
   const addressResult = address || address2;
   const onEnter = ({ currentTarget }) => {
     gsap.to(currentTarget, { scale: 0.96 });
@@ -123,7 +123,7 @@ const ListItem = ({ content, index }, props) => {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
-                children={content.name.slice(0, 10)}
+                children={content.name.slice(0, 20)}
               ></Text>
             </Flex>
 
@@ -197,7 +197,7 @@ const Wrapper = styled(motion.div)`
   transform-origin: top;
   transition: all 0.3s;
   animation: ${rotate} 1s ease-out;
-  margin-top: ${props => (props.index === 0 ? "0rem" : "0.5rem")};
+  margin-top: ${(props) => (props.index === 0 ? "0rem" : "0.5rem")};
   border-radius: 4px;
   box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
   font-weight: 600;
@@ -217,4 +217,4 @@ const SubWrap = styled(motion.div)`
   scale: 0.74;
 `;
 
-export { ListItem };
+export default ListItem;
