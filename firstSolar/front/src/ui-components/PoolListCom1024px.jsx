@@ -507,53 +507,7 @@ export default function PoolListCom1024px(props) {
             initial={{ borderRadius: 25 }}
             transition={{ duration: 0.3, ease: [0.43, 0.13, 0.23, 0.96] }}
           >
-            {sortAPY == "up" ? (
-              currentPagePoolList
-                ?.sort(aesAPY)
-                .map((item, idx) => (
-                  <Poolitem1024
-                    gap="17px"
-                    direction="column"
-                    width="unset"
-                    height="unset"
-                    justifyContent="center"
-                    alignItems="center"
-                    shrink="0"
-                    alignSelf="stretch"
-                    position="relative"
-                    padding="0px 0px 0px 0px"
-                    key={`PoolList1024px-${idx}`}
-                    item={item}
-                    length={currentPagePoolList.length}
-                    idx={idx}
-                    last={idx == currentPagePoolList.length - 1 ? true : false}
-                    currentPagePoolList={currentPagePoolList}
-                  />
-                ))
-            ) : sortAPY == "down" ? (
-              currentPagePoolList
-                ?.sort(descAPY)
-                .map((item, idx) => (
-                  <Poolitem1024
-                    gap="17px"
-                    direction="column"
-                    width="unset"
-                    height="unset"
-                    justifyContent="center"
-                    alignItems="center"
-                    shrink="0"
-                    alignSelf="stretch"
-                    position="relative"
-                    padding="0px 0px 0px 0px"
-                    key={`PoolList1024px-${idx}`}
-                    item={item}
-                    length={currentPagePoolList.length}
-                    idx={idx}
-                    last={idx == currentPagePoolList.length - 1 ? true : false}
-                    currentPagePoolList={currentPagePoolList}
-                  />
-                ))
-            ) : sortTVL == "up" ? (
+            {sortTVL == "up" ? (
               currentPagePoolList
                 ?.sort(aesTVL)
                 .map((item, idx) => (
@@ -574,6 +528,8 @@ export default function PoolListCom1024px(props) {
                     idx={idx}
                     last={idx == currentPagePoolList.length - 1 ? true : false}
                     currentPagePoolList={currentPagePoolList}
+                    sortAPY={sortAPY}
+                    sortTVL={sortTVL}
                   />
                 ))
             ) : sortTVL == "down" ? (
@@ -597,6 +553,58 @@ export default function PoolListCom1024px(props) {
                     idx={idx}
                     last={idx == currentPagePoolList.length - 1 ? true : false}
                     currentPagePoolList={currentPagePoolList}
+                    sortAPY={sortAPY}
+                    sortTVL={sortTVL}
+                  />
+                ))
+            ) : sortAPY == "up" ? (
+              currentPagePoolList
+                ?.sort(aesAPY)
+                .map((item, idx) => (
+                  <Poolitem1024
+                    gap="17px"
+                    direction="column"
+                    width="unset"
+                    height="unset"
+                    justifyContent="center"
+                    alignItems="center"
+                    shrink="0"
+                    alignSelf="stretch"
+                    position="relative"
+                    padding="0px 0px 0px 0px"
+                    key={`PoolList1024px-${idx}`}
+                    item={item}
+                    length={currentPagePoolList.length}
+                    idx={idx}
+                    last={idx == currentPagePoolList.length - 1 ? true : false}
+                    currentPagePoolList={currentPagePoolList}
+                    sortAPY={sortAPY}
+                    sortTVL={sortTVL}
+                  />
+                ))
+            ) : sortAPY == "down" ? (
+              currentPagePoolList
+                ?.sort(descAPY)
+                .map((item, idx) => (
+                  <Poolitem1024
+                    gap="17px"
+                    direction="column"
+                    width="unset"
+                    height="unset"
+                    justifyContent="center"
+                    alignItems="center"
+                    shrink="0"
+                    alignSelf="stretch"
+                    position="relative"
+                    padding="0px 0px 0px 0px"
+                    key={`PoolList1024px-${idx}`}
+                    item={item}
+                    length={currentPagePoolList.length}
+                    idx={idx}
+                    last={idx == currentPagePoolList.length - 1 ? true : false}
+                    currentPagePoolList={currentPagePoolList}
+                    sortAPY={sortAPY}
+                    sortTVL={sortTVL}
                   />
                 ))
             ) : (

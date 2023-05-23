@@ -23,11 +23,9 @@ import SwapContainer from "./components/swap/Container";
 import LiquidityContainer from "./components/liquidity/Container";
 import MypageContainer from "./components/mypage/Container";
 import NavigatorContainer from "./components/navigateHome/Container";
-import EmptySearchModal from "./ui-components/EmptySearchModal";
 
 import { OutRedirectModal } from "./ui-components";
 import SearchNavigatorContainer from "./components/navigateSearch/Container";
-import FooterContainer from "./components/footer/Container";
 
 const chains = [arbitrum, mainnet, polygon];
 const projectId = process.env.REACT_APP_PROJECT_ID;
@@ -46,10 +44,8 @@ const wagmiClient = createClient({
 const ethereumClient = new EthereumClient(wagmiClient, chains);
 
 function App() {
-  const emptySearch = useSelector(state => state.emptySearch);
-
   const outRedirectModalOpen = useSelector(
-    state => state.outRedirectModalOpen.isOpen
+    (state) => state.outRedirectModalOpen.isOpen
   );
 
   return (
@@ -77,12 +73,7 @@ function App() {
               ></Route>
             </Routes>
           </MainContent>
-          {/* <FooterContainer /> */}
-          {emptySearch && (
-            <LoadingModal>
-              <EmptySearchModal className="marginT" />
-            </LoadingModal>
-          )}
+
           {outRedirectModalOpen && (
             <LoadingModal>
               <OutRedirectModal />

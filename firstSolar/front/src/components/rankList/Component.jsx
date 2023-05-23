@@ -1,4 +1,4 @@
-import { ListMain } from "./listmain";
+import ListMain from "./Listmain";
 import { Flex } from "@aws-amplify/ui-react";
 import { motion } from "framer-motion";
 
@@ -36,9 +36,9 @@ const RankListComponent = ({ items, isLoading2 }) => {
         }}
       >
         <Flex
-          gap="5px"
+          gap={{ medium: "0px", large: "0px" }}
           direction={{ base: "column", large: "row" }}
-          justifyContent={{ base: "center", large: "space-around" }}
+          justifyContent={{ base: "center", large: "center" }}
           alignItems={{ base: "center", large: "center" }}
           padding={{
             base: "20px 30px 20px 30px",

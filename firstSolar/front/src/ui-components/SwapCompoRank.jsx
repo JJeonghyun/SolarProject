@@ -22,7 +22,6 @@ export default function SwapCompo1440px(props) {
   return (
     <Flex
       style={{
-        marginLeft: "43px",
         width: "100%",
         height: "3.35rem",
         display: "flex",

@@ -41,6 +41,7 @@ const ListItem = ({ content, index }, props) => {
             onMouseEnter={onEnter}
             onMouseLeave={onLeave}
             style={{
+              gap: "25px",
               width: "100%",
               height: "3.35rem",
               display: "flex",
@@ -48,8 +49,7 @@ const ListItem = ({ content, index }, props) => {
               justifyContent: "space-between",
               alignItems: "center",
               background: "#f2f2f2",
-              backgroundImage:
-                "linear-gradient(110deg, #fef263 20%, white 20%)",
+              backgroundImage: "linear-gradient(45deg, #fef263 19%, white 20%)",
               padding: "0px 19px 0px 33px",
               cursor: "pointer",
             }}
@@ -60,7 +60,7 @@ const ListItem = ({ content, index }, props) => {
             <Text
               color="rgba(54,43,33,0.8)"
               fontFamily="ffProLight"
-              fontSize="16px"
+              fontSize={{ base: "13px", medium: "18px" }}
               fontWeight="500"
               textAlign="center"
               display="flex"
@@ -78,8 +78,8 @@ const ListItem = ({ content, index }, props) => {
             <Flex gap="8px" justifyContent="flex-start" alignItems="center">
               <Image
                 src={content.mainNetLogo}
-                width="21px"
-                height="21px"
+                width={{ base: "15px", medium: "21px" }}
+                height={{ base: "15px", medium: "21px" }}
                 display="flex"
                 gap="unset"
                 alignItems="center"
@@ -93,8 +93,8 @@ const ListItem = ({ content, index }, props) => {
               ></Image>
               <Image
                 src={content.platformLogo}
-                width="21px"
-                height="21px"
+                width={{ base: "15px", medium: "21px" }}
+                height={{ base: "15px", medium: "21px" }}
                 display="flex"
                 gap="unset"
                 alignItems="center"
@@ -110,7 +110,7 @@ const ListItem = ({ content, index }, props) => {
                 letterSpacing="1.5px"
                 color="rgba(54,43,33,0.8)"
                 fontFamily="ffProLight"
-                fontSize="12px"
+                fontSize={{ base: "8px", medium: "15px" }}
                 fontWeight="500"
                 textAlign="center"
                 display="flex"
@@ -123,7 +123,7 @@ const ListItem = ({ content, index }, props) => {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
-                children={content.name.slice(0, 13)}
+                children={content.name.slice(0, 20)}
               ></Text>
             </Flex>
 
@@ -131,7 +131,7 @@ const ListItem = ({ content, index }, props) => {
               letterSpacing="0.75px"
               color="rgba(54,43,33,0.8)"
               fontFamily="ffProLight"
-              fontSize="13px"
+              fontSize={{ base: "8px", medium: "15px" }}
               fontWeight="500"
               textAlign="center"
               display="flex"
@@ -193,6 +193,7 @@ const rotate = keyframes`
 `;
 
 const Wrapper = styled(motion.div)`
+  gap: 45px;
   transform-origin: top;
   transition: all 0.3s;
   animation: ${rotate} 1s ease-out;
@@ -212,7 +213,8 @@ const ItemWrap = styled(motion.div)`
 
 const SubWrap = styled(motion.div)`
   display: flex;
+  justify-content: center;
   scale: 0.74;
 `;
 
-export { ListItem };
+export default ListItem;

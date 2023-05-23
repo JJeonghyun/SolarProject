@@ -71,7 +71,6 @@ const MypageComponent = ({
       {isMobile && (
         <motion.div
           style={{
-            marginLeft: "27px",
             width: "83vw",
             height: "unset",
             backgroundColor: "rgba(246,247,248,0.8)",
@@ -119,5 +118,6 @@ const MypPage = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-top: 30px;
+  margin-bottom: 65px;
   align-self: center;
 `;

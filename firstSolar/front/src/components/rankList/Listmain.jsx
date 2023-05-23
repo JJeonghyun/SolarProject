@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ListItem } from "./listitem";
+import ListItem from "./Listitem";
 import { Flex, Loader, Text } from "@aws-amplify/ui-react";
 import "../../css/Font.css";
 import "../../css/RankList.css";
@@ -12,7 +12,7 @@ const ListMain = ({ items, isLoading2 }) => {
           <Text
             color="rgba(54,43,33,0.8)"
             fontFamily="ffProBook"
-            fontSize="16px"
+            fontSize={{ base: "11px", medium: "19px" }}
             fontWeight="500"
             textAlign="center"
             display="flex"
@@ -31,7 +31,7 @@ const ListMain = ({ items, isLoading2 }) => {
             color="rgba(54,43,33,0.8)"
             paddingRight="35px"
             fontFamily="ffProBook"
-            fontSize="16px"
+            fontSize={{ base: "11px", medium: "19px" }}
             fontWeight="500"
             textAlign="center"
             display="flex"
@@ -49,7 +49,7 @@ const ListMain = ({ items, isLoading2 }) => {
           <Text
             color="rgba(54,43,33,0.8)"
             fontFamily="ffProBook"
-            fontSize="16px"
+            fontSize={{ base: "11px", medium: "19px" }}
             fontWeight="500"
             textAlign="center"
             display="flex"
@@ -94,34 +94,16 @@ const ListMain = ({ items, isLoading2 }) => {
 
 const SkewContainer = styled.div`
   position: relative;
-  perspective: 500;
+  perspective: 1200;
   margin-top: 55px;
   margin-bottom: 35px;
+  width: 79vw;
   scale: 0.86;
-
-  @media only screen and (max-width: 768px) {
-    scale: 0.71;
-    margin-right: 45px;
-  }
-
-  @media only screen and (max-width: 479px) {
-    scale: 0.69;
-    margin-right: 45px;
-  }
-  @media only screen and (max-width: 415px) {
-    scale: 0.6;
-    margin-right: 45px;
-  }
-  @media only screen and (max-width: 375px) {
-    scale: 0.51;
-    margin-right: 45px;
-  }
 `;
 
 const Wrapper = styled.div`
   flex-direction: column;
   height: 16rem;
-  width: 30rem;
   margin: auto;
   z-index: 10;
   box-shadow: 28px 25px 38px rgba(0, 0, 0, 0.25);
@@ -132,6 +114,7 @@ const Wrapper = styled.div`
 const TransitionContainer = styled.div`
   height: 100%;
 `;
+
 const Shadow = styled.div`
   height: 1rem;
   z-index: 100;
@@ -152,7 +135,6 @@ const ShadowBottom = styled(Shadow)`
 
 const RankName = styled.div`
   flex-direction: row;
-  width: 30rem;
   z-index: 10;
   transform: rotate3d(2, -2, 0, 20deg);
   overflow: hidden;
@@ -167,4 +149,4 @@ const RankNameList = styled.div`
   text-align: center;
 `;
 
-export { ListMain };
+export default ListMain;
